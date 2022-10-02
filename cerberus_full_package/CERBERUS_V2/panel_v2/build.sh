@@ -2,7 +2,7 @@
 rm -rf ./build
 npm run-script build -p
 cd build
-find -name "*.js" -exec ./../jsobfuscator/javascript-obfuscator/bin/javascript-obfuscator {} --output {} \;
+find -name "*.js" -exec ./../node_modules/javascript-obfuscator/bin/javascript-obfuscator {} --output {} \;
 find -name "*.map" -exec rm -rf {} \;
 rm manifest.json
 rm config.json
